@@ -1,0 +1,72 @@
+.project-card {
+    box-sizing: border-box; 
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;    
+
+    width: 20rem;
+    height: 30rem;
+
+    border-top: 2px solid;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+
+    padding: 1rem;
+}
+
+/* when project card hovered curosor pointer and border glow    */
+.project-card:hover {
+    cursor: pointer;
+    border-color: var(--orange-color);
+    box-shadow: 0 0 30px var(--orange-color);
+}
+
+
+.project-card-image {
+    max-width: 50%;
+    min-width: 50%;
+
+    aspect-ratio: 1 / 1; 
+    /* object-fit: cover; */
+}
+
+.project-card-link-container {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    /* margin-top: auto; */
+    align-self: end;
+}
+
+.project-card-link {
+    color: var(--orange-color);
+}
+
+.project-card-link:hover {
+    cursor: pointer;
+}
+
+.project-card-link-icon {
+    max-width: 40px;
+    max-height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    fill: var(--orange-color);
+}
+
+.project-card-tech-used-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.tech-used-chip {
+    font-weight: 600;
+}
