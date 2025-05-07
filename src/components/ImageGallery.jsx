@@ -56,18 +56,29 @@ const ImageGallery = ({ _imageUrls }) => {
         <>
             <style>
                 {`
+                    .slick-prev {
+                        left: -35px; /* Adjust the left button's position */
+                        top: 50%; /* Center vertically */
+                        transform: translate(0, -50%); /* Adjust for vertical centering */
+                    }
+
+
                     .slick-prev:before,
                     .slick-next:before {
                         color: red;
-                        font-size: 40px;
+                        font-size: 30px;
+                    }
+
+                    .slick-dots {
+                        color: red;
                     }
                 `}
             </style>
             <div 
                 className="slider-container"
                 style={{
-                    width: '90%', 
-                    minWidth: '90%', 
+                    width: '100%', 
+                    minWidth: '100%', 
                 }}
             >
                     <Slider ref={sliderRef} {...settings} className='img-slider'>

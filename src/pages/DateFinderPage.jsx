@@ -1,9 +1,21 @@
 import '../styles/ProjectPage.css'; // Optional: Add styles for the component
 import ImageGallery from '../components/ImageGallery.jsx'; // Import the ImageGallery component
 
+import about from '../assets/project-pictures/resume-rocket/about.png';
+import link from '../assets/project-pictures/resume-rocket/link.png';
+import color from '../assets/project-pictures/resume-rocket/color.png';
+import projects from '../assets/project-pictures/resume-rocket/projects.png';
+import mm1 from '../assets/project-pictures/resume-rocket/mm1.png';
+import mm2 from '../assets/project-pictures/resume-rocket/mm2.png';
+import mm3 from '../assets/project-pictures/resume-rocket/mm3.png';
+import mm4 from '../assets/project-pictures/resume-rocket/mm4.png';
+import mm5 from '../assets/project-pictures/resume-rocket/mm5.png';
+import mm6 from '../assets/project-pictures/resume-rocket/mm6.png';
 
-const ResumeRocketPage = () => {
 
+const DateFinderPage = () => {
+
+    const portfolioImageUrls = [about, link, color, projects, mm1, mm2, mm3, mm4, mm5, mm6];
 
     return (
         <div className="project-page-root">
@@ -49,4 +61,4 @@ const ResumeRocketPage = () => {
     );
 };
 
-export default ResumeRocketPage;
+export default DateFinderPage;
