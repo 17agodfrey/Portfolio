@@ -14,7 +14,7 @@ const ProjectCard = ({ title, urlTitle, description, image, siteLink, githubLink
     };
 
     return (
-        <div className="project-card fancy-color-container" onClick={onClick}>
+        <div className="card project-card" onClick={onClick}>
             <div className="project-card-link-container">
                 <a href={siteLink} target="_blank" rel="noopener noreferrer" className="project-card-link">
                     <LanguageIcon className="project-card-link-icon" alt={`go to ${title} site`} />

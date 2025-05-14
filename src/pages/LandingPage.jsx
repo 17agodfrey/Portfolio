@@ -1,4 +1,5 @@
 import "../styles/LandingPage.css";
+import "../styles/text.css";
 import ProjectCard from "../components/ProjectCard.jsx"; 
 import RR_Logo from "../assets/RR_logo1.png";
 import DateFinderLogo from "../assets/DateFinder_logo.png";
@@ -8,17 +9,30 @@ import ReactLogo from "../assets/react.svg";
 const LandingPage = () => {
     return (
         <div id="landing-page-root">
-            <div id="name-window" className="fancy-color-container">
-                <header className="header" id="yeet">
+            {/* <div id="name-window" className="fancy-color-container">
+                <header className="header" id="fancy-color-text">
                     <h1>Austin Godfrey</h1>
                 </header>
                 <main className="subheader">
                     <p>Full Stack Web Development + Cool stuff Idk</p>
                 </main>
+            </div> */}
+
+            <div id="name-window" className="card">
+                <header className="header">
+                    <h1 className="matrix-text" data-text="Austin Godfrey">Austin Godfrey</h1>
+                </header>
+                <main className="subheader">
+                    {/* <p>Full Stack Web Development + Cool stuff Idk</p> */}
+                <p aria-label="Hi! I'm a developer">
+                    Hi! I&apos;m a&nbsp;<span className="typewriter thick"></span>
+                </p>
+                </main>
             </div>
 
+
             <div id="about-window">
-                <h2>About Me</h2>
+                <h2 className="fancy-color-text-orange-red">About Me</h2>
                 <p>
                     I am a passionate full-stack web developer with a knack for creating dynamic and responsive web applications. I love coding and enjoy learning new technologies. My goal is to build user-friendly applications that solve real-world problems.
                 </p>
@@ -35,7 +49,7 @@ const LandingPage = () => {
 
 
             <div id="projects-window">
-                <h2>Projects</h2>
+                <h2 className="fancy-color-text-orange-red">Projects</h2>
                 <div className="projects-container">
                     <ProjectCard
                         title="Resume Rocket"

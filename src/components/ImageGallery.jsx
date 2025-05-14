@@ -57,7 +57,13 @@ const ImageGallery = ({ _imageUrls }) => {
             <style>
                 {`
                     .slick-prev {
-                        left: -35px; /* Adjust the left button's position */
+                        left: -22px; /* Adjust the left button's position */
+                        top: 50%; /* Center vertically */
+                        transform: translate(0, -50%); /* Adjust for vertical centering */
+                        z-index: 1; /* Ensure it appears above other elements */
+                    }
+                    .slick-next {
+                        right: -10px; /* Adjust the right button's position */
                         top: 50%; /* Center vertically */
                         transform: translate(0, -50%); /* Adjust for vertical centering */
                     }

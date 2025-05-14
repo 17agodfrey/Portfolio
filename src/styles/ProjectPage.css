@@ -22,13 +22,13 @@
 }
 
 .project-page-header h1 {
-    font-size: 2rem;
-    color: var(--orange-color);
+    font-size: 80px;
 }
 
-.project-page-header h2 {
-    font-size: 1rem;
-    color: var(--blue-color);
+.project-page-header h3 {
+    font-size: 16px;
+    letter-spacing: .1em;
+    color: var(--red-orange-color);
 }
 
 .project-page-content-section {
@@ -39,7 +39,7 @@
 }
 
 .project-page-content-section h2 {
-    font-size: 1.5rem;
+    font-size: 30px;
     color: var(--purple-color);
 }
 
@@ -51,5 +51,11 @@
     .project-page-section-sizing {
         max-width: 35rem;
     }
+}
+
+.project-page-add-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 

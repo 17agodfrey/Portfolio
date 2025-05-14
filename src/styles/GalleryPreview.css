@@ -1,0 +1,74 @@
+.gallery-preview-container {
+    position: relative;
+    width: 100%; /* Adjust as needed */
+    height: 400px; /* Adjust as needed */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-preview-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    border-radius: 8px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.gallery-preview-image-1 {
+    z-index: 5;
+}
+
+.gallery-preview-image-2,
+.gallery-preview-image-3 {
+    z-index: 4;
+    transform: translate(-40px, 10px); /* Shift slightly behind the first image */
+}
+
+.gallery-preview-image-3 {
+    transform: translate(40px, 10px); /* Shift slightly behind the first image */
+}
+
+.gallery-preview-image-4,
+.gallery-preview-image-5 {
+    z-index: 3;
+    transform: translate(-80px, 20px); /* Shift further behind */
+}
+
+.gallery-preview-image-5 {
+    transform: translate(80px, 20px); /* Shift further behind */
+}
+
+/* Overlay for hover effect */
+.gallery-preview-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 8px;
+    z-index: 6; /* Ensure the overlay is above all images */
+
+}
+
+/* Only gray out the first image on hover */
+.gallery-preview-container:hover .gallery-preview-image-1 {
+    filter: grayscale(100%); /* Grayscale effect for the first image */
+}
+
+/* Show the overlay text on hover */
+.gallery-preview-container:hover .gallery-preview-overlay {
+    opacity: 1; /* Make the overlay visible */
+}

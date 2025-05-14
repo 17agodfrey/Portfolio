@@ -5,23 +5,46 @@
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;    
-
     width: 20rem;
     height: 30rem;
-
-    border-top: 2px solid;
-    border-right: 2px solid;
-    border-bottom: 2px solid;
-    border-left: 2px solid;
-
     padding: 1rem;
+}
+
+.card.project-card::before,
+.card.project-card::after {
+    inset: -.25rem;
+    background: var(--orange-color); /* fallback solid */
+    animation: none;
+}
+
+ /* Only .after gets blur */
+.card.project-card::after {
+  z-index: -2; /* Place it behind the ::before layer */
+  filter: blur(.75rem); /* Glow only on the blurred ::after */
+}
+
+.card.project-card:hover::before,
+.card.project-card:hover::after {
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--purple-color),
+    var(--blue-color),
+    var(--pink-color),
+    var(--red-orange-color),
+    var(--orange-color),
+    var(--blue-color),
+    var(--purple-color)
+  );
+  animation: rotation 5s linear infinite;
+}
+
+.card.project-card:hover::after {
+  filter: blur(2rem); /* Glow only on the blurred ::after */
 }
 
 /* when project card hovered curosor pointer and border glow    */
 .project-card:hover {
     cursor: pointer;
-    border-color: var(--orange-color);
-    box-shadow: 0 0 30px var(--orange-color);
 }
 
 
@@ -44,7 +67,7 @@
 }
 
 .project-card-link {
-    color: var(--orange-color);
+    color: var(--blue-color);
 }
 
 .project-card-link:hover {
@@ -56,7 +79,7 @@
     max-height: 40px;
     min-width: 40px;
     min-height: 40px;
-    fill: var(--orange-color);
+    fill: var(--blue-color);
 }
 
 .project-card-tech-used-container {

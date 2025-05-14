@@ -1,5 +1,8 @@
+import React from 'react';
+import { useState } from 'react';
 import '../styles/ProjectPage.css'; // Optional: Add styles for the component
 import ImageGallery from '../components/ImageGallery.jsx'; // Import the ImageGallery component
+import GalleryPreview from '../components/GalleryPreview.jsx';
 
 import about from '../assets/project-pictures/resume-rocket/about.png';
 import link from '../assets/project-pictures/resume-rocket/link.png';
@@ -12,49 +15,56 @@ import mm4 from '../assets/project-pictures/resume-rocket/mm4.png';
 import mm5 from '../assets/project-pictures/resume-rocket/mm5.png';
 import mm6 from '../assets/project-pictures/resume-rocket/mm6.png';
 
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
+
+
 
 const DateFinderPage = () => {
 
     const portfolioImageUrls = [about, link, color, projects, mm1, mm2, mm3, mm4, mm5, mm6];
+    const [imageGalleryOpen, setImageGalleryOpen] = useState(false);
+
+
 
     return (
         <div className="project-page-root">
             <div className="project-page-header project-page-section-sizing">
                 <div className="project-page-header-top-part">
-                    <h1>DateFinder</h1>
-                    <h2>Website, Senior Capstone Project</h2>
-                    <h2>Jan 2024 - Dec 2024</h2>
+                    <h1 className="fancy-color-text-orange-red">DateFinder</h1>
+                    <h3>Website, Personal Project</h3>
+                    <h3>May 2024 - Dec 2024</h3>
                 </div>
                 <p>
-                    Today&apos;s job market is tough. Getting past resume filtering software, building a network, and 
-                    separating yourself from the competition can be overwhelming. Enter Resume Rocket, a comprehensive 
-                    tool designed to help job seekers improve their chances of landing their dream job. The site provides 
-                    users with a resume tailoring service, portfolio builder, and networking opportunities, all in one place.
+                    Have you ever spent too much time looking for something to do on Google Maps? A date, an activity with friends, or a family outing? Constantly having to type in different 
+                    keywords and locations? Datefinder is a web application that allows you to see map results for multiple types of activities at once, and filter according to your preferences.
                 </p>
             </div>
 
             <div className="project-page-content-section project-page-section-sizing">
-                <h2>Resume Tailoring</h2>
+                <h2 className="fancy-color-text-purple-blue">Idea Generation</h2>
                 <p>
-                    Users can get suggestions for their resume for a specific job posting either by using a URL for their desired job posting on the applications section of the resume page, or by using our browser extension on the page with the job application. These suggestions can be viewed and applied by clicking on their associated resume for each application in the applications section of the resume page.
-                    After making changes to a resume, users can save that resume as a version to refer to later.
+                    To generate activity ideas, users will select multiple parameters such as location, indoor/outdoor, activity level, and duration. This will give a list of activities that match the user&apos;s selections. 
+                    Users will then be able to choose the activites they wish to see results for.
                 </p>
             </div>
 
             <div className="project-page-content-section project-page-section-sizing">
-                <h2>Portfolio Builder</h2>
+                <h2 className="fancy-color-text-purple-blue">Map View</h2>
                 <p>
-                    Users can create a personal portfolio to dynamically display projects they have worked on. These portfolios can be customized and there are a variety of sections to choose from to add content to each project.
-                    A unique URL is provided for the portfolio enabling users to include it on any job application, so that companies can easily view their portfolio.
+                    Using Google Maps Javascript API, the site displays an interactable map with color coded markers for each activity. Also displayed is a list view of the activities, with 
+                    general information about each one. Clicking on an activity will show an image gallery dialog. 
                 </p>
-                <ImageGallery _imageUrls={portfolioImageUrls} />                
+
+                {/* <ImageGallery _imageUrls={portfolioImageUrls} />                 */}
+
             </div>
 
             <div className="project-page-content-section project-page-section-sizing">
-                <h2>User Networking</h2>
+                <h2 className="fancy-color-text-purple-blue">Result Filtering</h2>
                 <p>
-                    The networking page shows all users of the site, some details about them, and each user&apos;s resume and portfolio if provided. These can be searched for with the search bar.
-                    Users can message and interact with each other via our messaging feature.
+                    To narrow down results, users can further filter by price and rating, and select/deselect activity types- all of which will update the map and list view. Finally, new searches can be made with the 
+                    &aposNew Search&apos; button, which will reset the map and list view to the original state.
                 </p>
             </div>
         </div>
