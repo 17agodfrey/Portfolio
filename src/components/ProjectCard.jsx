@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import '../styles/ProjectCard.css'; // Optional: Add styles for the component
 import LanguageIcon from '@mui/icons-material/Language';
-import GithubIcon from '../assets/navbar/github-brands-solid.svg?react';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import Chip from '@mui/material/Chip';
 import { useNavigate } from 'react-router-dom';
 
@@ -20,7 +20,7 @@ const ProjectCard = ({ title, urlTitle, description, image, siteLink, githubLink
                     <LanguageIcon className="project-card-link-icon" alt={`go to ${title} site`} />
                 </a>
                 <a href={githubLink} target="_blank" rel="noopener noreferrer" className="project-card-link">
-                    <GithubIcon className="project-card-link-icon" alt={`go to ${title} Github`} />
+                    <GitHubIcon className="project-card-link-icon" alt={`go to ${title} Github`} />
                 </a>
             </div>
             {image && <img src={image} alt={title} className="project-card-image" />}

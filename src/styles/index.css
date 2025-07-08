@@ -51,7 +51,7 @@ body {
   --purple-color: #7700ff;
   --blue-color: #2DE2E6;
   --pink-color: #FF2EEC;
-    --red-color: #D1004C;
+  --red-color: #D1004C;
   --red-orange-color: #FF3864;
   --orange-color: #FF6C11;
   --text-color: #eff6fa;
@@ -77,6 +77,14 @@ h3 {
   font-family: 'Inter', sans-serif;
   color: var(--blue-color); 
 }
+
+h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--blue-color); 
+}
+
 
 p {
   line-height: 1.6em;

@@ -5,8 +5,8 @@
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;    
-    width: 20rem;
-    height: 30rem;
+    width: 24rem;
+    height: 33rem;
     padding: 1rem;
 }
 
@@ -54,6 +54,11 @@
 
     aspect-ratio: 1 / 1; 
     /* object-fit: cover; */
+    border-radius: 50%;
+}
+
+.project-card-content {
+    margin: 1rem 0 1rem 0;
 }
 
 .project-card-link-container {
@@ -82,12 +87,18 @@
     fill: var(--blue-color);
 }
 
+.project-card-link-icon:hover {
+    fill: var(--orange-color);
+}
+
 .project-card-tech-used-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.5rem;
     margin-top: auto;
+    row-gap: 0.5rem; /* Optional: extra vertical spacing between rows */
 }
 
 .tech-used-chip {
