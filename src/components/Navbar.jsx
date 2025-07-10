@@ -44,7 +44,7 @@ export default function Navbar() {
             <Link to="mailto:17agodfrey@gmail.com" className="nav_link" target="_blank" rel="noopener noreferrer">
                 <EmailLogo className="nav-link-img" />
             </Link>
-            <Link to="https://www.linkedin.com/in/austin-godfrey1560/" className="nav_link">
+            <Link to="https://www.linkedin.com/in/austin-godfrey1560/" className="nav_link" rel="noopener noreferrer">
                 <LinkedinLogo className="nav-link-img" />
             </Link>
             <Link to="https://github.com/17agodfrey" className="nav_link" target="_blank" rel="noopener noreferrer">
