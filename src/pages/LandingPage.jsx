@@ -52,7 +52,7 @@ const LandingPage = () => {
             <div id="about-window">
                 <h2 className="fancy-color-text-orange-red">About Me</h2>
                 <p>
-                    Hi, I&apos;m Austin, a passionate Software Developer with over 3 years experience building responsive, live applications using cutting edge technologies. I hold a degree in Software Development and am always learning new things on sites like Udemy, and by working my own stuff. Let&apos;s build something cool!
+                    Hi, I&apos;m Austin, a passionate Software Developer with over 3 years experience building responsive, live applications using cutting edge technologies. I hold a degree in Software Development and am always learning new things on sites like Udemy, or by working my own stuff. Let&apos;s build something cool!
                 </p>
             </div>
 
