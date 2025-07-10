@@ -74,8 +74,8 @@ const LandingPage = () => {
                         urlTitle="whatdo"
                         description="Web application to find activities to do with friends, family, or a date. Users can filter by location, activity type, and more. Features an interactive Google Map. "
                         image={WhatDoLogo}
-                        siteLink="https://datefinder.lol"
-                        githubLink="https://github.com/17agodfrey/DateFinder"
+                        siteLink="https://whatdo.online"
+                        githubLink="https://github.com/17agodfrey/WhatDo"
                         techUsed={["JavaScript","React", "C#", ".NET Core", "PostgreSQL", "Entity Framework", "Supabase", "Google Cloud Provider", "AWS" ]}
                     />
                     <ProjectCard

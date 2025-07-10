@@ -64,15 +64,21 @@
 .project-card-link-container {
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: start;
     align-items: center;
     gap: 1rem;
     /* margin-top: auto; */
     align-self: end;
+    height: 40px;
 }
 
 .project-card-link {
     color: var(--blue-color);
+    max-width: 40px;
+    max-height: 40px;
+    min-width: 40px;
+    min-height: 40px;
 }
 
 .project-card-link:hover {

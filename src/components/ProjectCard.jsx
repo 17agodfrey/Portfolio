@@ -16,12 +16,28 @@ const ProjectCard = ({ title, urlTitle, description, image, siteLink, githubLink
     return (
         <div className="card project-card" onClick={onClick}>
             <div className="project-card-link-container">
-                <a href={siteLink} target="_blank" rel="noopener noreferrer" className="project-card-link">
+                {siteLink && (
+                    <a
+                    href={siteLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-card-link"
+                    onClick={e => e.stopPropagation()}
+                    >
                     <LanguageIcon className="project-card-link-icon" alt={`go to ${title} site`} />
-                </a>
-                <a href={githubLink} target="_blank" rel="noopener noreferrer" className="project-card-link">
-                    <GitHubIcon className="project-card-link-icon" alt={`go to ${title} Github`} />
-                </a>
+                    </a>
+                )}
+                {githubLink && (
+                    <a
+                        href={githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-card-link"
+                        onClick={e => e.stopPropagation()}
+                    >
+                        <GitHubIcon className="project-card-link-icon" alt={`go to ${title} Github`} />
+                    </a>
+                )}
             </div>
             {image && <img src={image} alt={title} className="project-card-image" />}
             <div className="project-card-content">

@@ -66,18 +66,22 @@ const ResumeRocketPage = () => {
                     <h3>Jan 2024 - Dec 2024</h3>
 
                     <div className="hz-left-top project-page-links" style={{gap: '1rem'}}>
-                        <a href={siteLink} target="_blank" rel="noopener noreferrer" className="project-card-link">
-                            <div className='hz-left project-page-link-container' style={{gap: '.35rem'}}>
-                                <LanguageIcon className="project-card-link-icon" alt={`go to ResumeRocket site`} />
-                                <p>Visit Live Site</p>
-                            </div>
-                        </a>
-                        <a href={githubLink} target="_blank" rel="noopener noreferrer" className="project-card-link">
-                            <div className='hz-left project-page-link-container' style={{gap: '.35rem'}}>
-                                <GitHubIcon className="project-card-link-icon" alt={`go to ResumeRocket Github`} />
-                                <p>Github Repository</p>
-                            </div>
-                        </a>
+                        <div>
+                            <a href={siteLink} target="_blank" rel="noopener noreferrer" className="project-card-link">
+                                <div className='hz-left project-page-link-container' style={{gap: '.35rem'}}>
+                                    <LanguageIcon className="project-card-link-icon" alt={`go to ResumeRocket site`} />
+                                    <p>Visit Live Site</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href={githubLink} target="_blank" rel="noopener noreferrer" className="project-card-link">
+                                <div className='hz-left project-page-link-container' style={{gap: '.35rem'}}>
+                                    <GitHubIcon className="project-card-link-icon" alt={`go to ResumeRocket Github`} />
+                                    <p>Github Repository</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
 

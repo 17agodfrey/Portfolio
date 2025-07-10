@@ -6,8 +6,14 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import LanguageIcon from '@mui/icons-material/Language';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
-const siteLink="https://datefinder.lol"
-const githubLink="https://github.com/17agodfrey/DateFinder"
+import IdeaGenerationVideo from '../assets/project-pictures/whatdo/IdeaGenerationVideo.mp4'
+import MapViewVideo from '../assets/project-pictures/whatdo/MapViewVideo.mp4'
+import ResultFilteringVideo from '../assets/project-pictures/whatdo/ResultFilteringVideo.mp4'
+
+
+
+const siteLink="https://whatdo.online"
+const githubLink="https://github.com/17agodfrey/WhatDo"
 
 const WhatDoPage = () => {
     const rootRef = useRef(null);
@@ -37,18 +43,22 @@ const WhatDoPage = () => {
                     <h3>May 2024 - Dec 2024</h3>
 
                     <div className="hz-left-top project-page-links" style={{gap: '1rem'}}>
-                        <a href={siteLink} target="_blank" rel="noopener noreferrer" className="project-card-link">
-                            <div className='hz-left project-page-link-container' style={{gap: '.35rem'}}>
-                                <LanguageIcon className="project-card-link-icon" alt={`go to WhatDo site`} />
-                                <p>Deployed Site</p>
-                            </div>
-                        </a>
-                        <a href={githubLink} target="_blank" rel="noopener noreferrer" className="project-card-link">
-                            <div className='hz-left project-page-link-container' style={{gap: '.35rem'}}>
-                                <GitHubIcon className="project-card-link-icon" alt={`go to WhatDo Github`} />
-                                <p>Github Repository</p>
-                            </div>
-                        </a>
+                        <div>
+                            <a href={siteLink} target="_blank" rel="noopener noreferrer" className="project-card-link">
+                                <div className='hz-left project-page-link-container' style={{gap: '.35rem'}}>
+                                    <LanguageIcon className="project-card-link-icon" alt={`go to WhatDo site`} />
+                                    <p>Deployed Site</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href={githubLink} target="_blank" rel="noopener noreferrer" className="project-card-link">
+                                <div className='hz-left project-page-link-container' style={{gap: '.35rem'}}>
+                                    <GitHubIcon className="project-card-link-icon" alt={`go to WhatDo Github`} />
+                                    <p>Github Repository</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <p>
@@ -63,6 +73,16 @@ const WhatDoPage = () => {
                     To generate activity ideas, users will select multiple parameters such as location, indoor/outdoor, activity level, and duration. This will give a list of activities that match the user&apos;s selections. 
                     Users will then be able to choose the activites they wish to see results for.
                 </p>
+                <video
+                    src={IdeaGenerationVideo}
+                    controls
+                    autoPlay
+                    loop
+                    muted
+                    style={{ width: "100%", maxWidth: "800px", borderRadius: "8px" }}
+                >
+                    Error: Your browser does not support the video tag.
+                </video>
             </div>
 
             <div className="project-page-content-section project-page-section-sizing">
@@ -71,8 +91,16 @@ const WhatDoPage = () => {
                     Using Google Maps Javascript API, the site displays an interactable map with color coded markers for each activity. Also displayed is a list view of the activities, with 
                     general information about each one. Clicking on an activity will show an image gallery dialog. 
                 </p>
-
-                {/* <ImageGallery _imageUrls={portfolioImageUrls} />                 */}
+                <video
+                    src={MapViewVideo}
+                    controls
+                    autoPlay
+                    loop
+                    muted
+                    style={{ width: "100%", maxWidth: "800px", borderRadius: "8px" }}
+                >
+                    Error: Your browser does not support the video tag.
+                </video>
 
             </div>
 
@@ -82,6 +110,16 @@ const WhatDoPage = () => {
                     To narrow down results, users can further filter by price and rating, and select/deselect activity types- all of which will update the map and list view. Finally, new searches can be made with the 
                     &aposNew Search&apos; button, which will reset the map and list view to the original state.
                 </p>
+                <video
+                    src={ResultFilteringVideo}
+                    controls
+                    autoPlay
+                    loop
+                    muted
+                    style={{ width: "100%", maxWidth: "800px", borderRadius: "8px" }}
+                >
+                    Error: Your browser does not support the video tag.
+                </video>
             </div>
         </div>
     );
