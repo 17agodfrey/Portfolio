@@ -19,9 +19,9 @@
 }
 
 #nav-window-navigtaion {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 2rem; */
 }
 
 #nav_links {

@@ -52,16 +52,7 @@ const LandingPage = () => {
             <div id="about-window">
                 <h2 className="fancy-color-text-orange-red">About Me</h2>
                 <p>
-                    I am a passionate full-stack web developer with a knack for creating dynamic and responsive web applications. I love coding and enjoy learning new technologies. My goal is to build user-friendly applications that solve real-world problems.
-                </p>
-                <p>
-                    I have experience in various programming languages and frameworks, including JavaScript, React, Node.js, and more. I am always eager to learn and grow in my field.
-                </p>
-                <p>
-                    In my free time, I enjoy exploring new technologies, contributing to open-source projects, and collaborating with other developers. I believe in the power of community and love sharing knowledge with others.
-                </p>
-                <p>
-                    If you&apos;re interested in collaborating or just want to chat, feel free to reach out!
+                    Hi, I&apos;m Austin, a passionate Software Developer with over 3 years experience building responsive, live applications using cutting edge technologies. I hold a degree in Software Development and am always learning new things on sites like Udemy, and by working my own stuff. Let&apos;s build something cool!
                 </p>
             </div>
 

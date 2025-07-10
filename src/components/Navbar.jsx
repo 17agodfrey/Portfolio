@@ -18,6 +18,8 @@ import LinkedinLogo from '../assets/navbar/linkedin-brands-solid.svg?react';
 import EmailLogo from '../assets/navbar/envelope-solid.svg?react';
 import GithubLogo from '../assets/navbar/github-brands-solid.svg?react';
 
+import Logo from '../assets/AG_logo-removebg.png'
+
 
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -25,62 +27,17 @@ export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const handleAccountButtonClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleAccountMenuClose = () => {
-    setAnchorEl(null);
-  };
-
-  const handleNavLinkClick = (link) => {
-    setActiveNavLink(link);
-  };
-
-  const handleSearch = (e) => {
-    if (e.key === 'Enter' && searchQuery.trim()) {
-      navigate(`/networking?query=${searchQuery}`);
-    }
-  };
-
-  useEffect(() => {
-    if (location.pathname.includes('/resume-list')) setActiveNavLink('/resume-list');
-    else if (location.pathname.includes('/portfolio')) setActiveNavLink('/portfolio');
-    else if (location.pathname.includes('/networking')) setActiveNavLink('/networking');
-    else setActiveNavLink(null);
-    setSearchQuery(''); 
-  }, [location]);
-
 
   return (
     <>
       <nav id="navbar">
-        {/* <Link to="/" id="logo_name">
-          <img id="logo" src={rocket} alt="logo" />
-          <h1 id="brand_name">Resume Rocket</h1>
-        </Link> */}
+        <div className='nav-column' style={{display: 'flex', justifyContent: 'start', paddingLeft: '2rem'}}>
+          <Link to="/" className="nav_link">
+            <img src={Logo} alt="to home" className='nav-link-img' style={{width: '40px', height: '40px'}} />
+          </Link>        
+        </div>
 
-        {/* <div id="nav_links">
-          <Link to="/resume" className="nav_link" onClick={() => handleNavLinkClick('/resume')}>
-            <img src={activeNavLink === '/resume' ? fileIconOrange : fileIcon} alt="resume" />
-            <p>Resume</p>
-          </Link>
-          <Link to="/portfolio" className="nav_link" onClick={() => handleNavLinkClick('/portfolio')}>
-            <img src={activeNavLink === '/portfolio' ? briefCaseIconOrange : briefCaseIcon} alt="portfolio" />
-            <p>Portfolio</p>
-          </Link>
-          <Link to="/networking" className="nav_link" onClick={() => handleNavLinkClick('/networking')}>
-            <img src={activeNavLink === '/networking' ? usersIconOrange : usersIcon} alt="networking" />
-            <p>Networking</p>
-          </Link>
-        </div> */}
-
-        <div className='nav-column'></div>
         <div id="nav-window-navigtaion" className='nav-column'>
-            {/* <p>About</p>
-            <p>Projects</p> */}
         </div>
 
         <div id="nav_links" className='nav-column'>
