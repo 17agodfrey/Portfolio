@@ -32,7 +32,7 @@ import DialogContent from '@mui/material/DialogContent';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 
-const siteLink="https://resume-rocket.online"
+const siteLink="https://resume-rocket.online/login-demo"
 const githubLink="https://github.com/orgs/ResumeRocket-PM/repositories"
 
 const ResumeRocketPage = () => {

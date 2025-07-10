@@ -65,7 +65,7 @@ const LandingPage = () => {
                         urlTitle="resume-rocket"
                         description="Web application for helping users land jobs. Main services include resume tailoring, resume version history, portfolio creation, and user networking."
                         image={RR_Logo}
-                        siteLink="https://resume-rocket.online"
+                        siteLink="https://resume-rocket.online/login-demo"
                         githubLink="https://github.com/orgs/ResumeRocket-PM/repositories"
                         techUsed={["JavaScript","React", "C#", ".NET Core", "MUI", "Microsoft SQL Server", "Docker", "OpenAI API", "AWS", "Azure" ]}
                     />
