@@ -8,6 +8,7 @@ import RR_Logo from "../assets/RR_logo1.png";
 import WhatDoLogo from "../assets/project-pictures/whatdo/whatdo-logo.png";
 import ReactLogo from "../assets/react.svg";
 import AlliedMechanicalLogo from "../assets/project-pictures/allied-mechanical/logo3.png"; // Example logo, replace with actual logo if needed
+import api from "../api";
 
 
 
@@ -18,11 +19,33 @@ const LandingPage = () => {
     const rootRef = useRef(null);
     const location = useLocation();
 
+    const { pingRR, pingWD } = api();
+
     useEffect(() => {
-    if (rootRef.current) {
-        window.scrollTo(0, 0);
-    }
+        if (rootRef.current) {
+            window.scrollTo(0, 0);
+        }
     }, [location]);
+
+    useEffect(() => {
+        const hasPinged = sessionStorage.getItem("landingPagePingDone");
+
+        if (!hasPinged) {
+            Promise.all([
+            pingRR().then(res => res.text()),
+            pingWD().then(res => res.text())
+            ])
+            .then(([rrRes, wdRes]) => {
+                console.log("RR ping response:", rrRes);
+                console.log("WD ping response:", wdRes);
+                sessionStorage.setItem("landingPagePingDone", "true");
+            })
+            .catch((err) => {
+                console.error("Ping error:", err);
+                sessionStorage.setItem("landingPagePingDone", "true"); // still set to avoid repeat pings
+            });
+        }
+    }, []);
 
 
     return (
