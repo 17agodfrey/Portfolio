@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useRef, useEffect } from 'react';
-import { useLocation } from 'react-router-dom'; // Add this import
+import { useLocation, useNavigate } from 'react-router-dom';
 import '../styles/ProjectPage.css'; // Optional: Add styles for the component
 import '../styles/AlliedMechanicalPage.css'; // Import styles for Allied Mechanical page
 import PayrollSnapshot from '../assets/project-pictures/allied-mechanical/media for portfolio/payroll.png';
@@ -17,6 +17,7 @@ const AlliedMechanicalPage = () => {
 
     const rootRef = useRef(null);
     const location = useLocation();
+    const navigate = useNavigate();
 
     useEffect(() => {
     if (rootRef.current) {
@@ -29,7 +30,7 @@ const AlliedMechanicalPage = () => {
         <div className="project-page-root" ref={rootRef}>
             <div className="project-page-header project-page-section-sizing">
                 <div id='back-button-container'>
-                    <button id="back-button" onClick={() => window.history.back()}>
+                    <button id="back-button" onClick={() => navigate("/") }>
                         <div className="hz-center" style={{gap: '.5rem'}}>
                             <ArrowBackIcon style={{ fontSize: '2rem', color: 'var(--purple-color)' }} />
                             <p className="back-button-text" style={{fontSize:"16px"}}>Back</p>
