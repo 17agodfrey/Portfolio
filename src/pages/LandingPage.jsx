@@ -106,7 +106,7 @@ const LandingPage = () => {
                         urlTitle="allied-mechanical-job-costing-tool"
                         description="Contract work for Allied Mechanical. A desktop application that analyzes verbose payroll and tax excel documents to generate a new easy-to-read job costing report."
                         image={AlliedMechanicalLogo}
-                        link="https://example.com"
+                        githubLink="https://github.com/17agodfrey/AlliedMechanical-Payroll-Automation"
                         techUsed={["Python", "Pandas", "Tkinter", "Excel Automation", "Data Analysis"]}
                     />
                 </div>
