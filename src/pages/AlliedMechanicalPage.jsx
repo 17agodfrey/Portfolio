@@ -5,7 +5,7 @@ import '../styles/ProjectPage.css'; // Optional: Add styles for the component
 import '../styles/AlliedMechanicalPage.css'; // Import styles for Allied Mechanical page
 import PayrollSnapshot from '../assets/project-pictures/allied-mechanical/media for portfolio/payroll.png';
 import TaxSnapshot from '../assets/project-pictures/allied-mechanical/media for portfolio/tax.png';
-import Output from '../assets/project-pictures/allied-mechanical/media for portfolio/output-1.png';
+import Output from '../assets/project-pictures/allied-mechanical/media for portfolio/output-updated-8-20-2025.png';
 import OutputSummary from '../assets/project-pictures/allied-mechanical/media for portfolio/output-summary.png';
 import DemoVideo from '../assets/project-pictures/allied-mechanical/media for portfolio/jobcosting-SR-edited-no-excel.mp4'; 
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
